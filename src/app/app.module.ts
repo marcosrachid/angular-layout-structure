@@ -1,20 +1,33 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { NotFoundComponent } from './not-found/not-found.component';
+import { AppRoutingModule } from './app-routing.module';
 
+import {
+  LayoutModule,
+  NotFoundModule,
+  SignInModule,
+  SignUpModule,
+  SharedModule,
+  AppGuard
+} from './';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    NotFoundComponent
+    AppComponent
   ],
   imports: [
-    BrowserModule
+    LayoutModule,
+    NotFoundModule,
+    SignInModule,
+    SignUpModule,
+    SharedModule,
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    AppGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

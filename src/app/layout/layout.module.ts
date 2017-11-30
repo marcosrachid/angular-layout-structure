@@ -1,13 +1,32 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { LayoutComponent } from './layout.component';
-import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
+import {
+  Page1Module,
+  Page2Module,
+  Page3Module,
+  LayoutComponent,
+  HeaderComponent,
+  FooterComponent
+} from './';
+
+import { SharedModule } from '../_shared';
 
 @NgModule({
   imports: [
-    CommonModule
+    SharedModule
   ],
-  declarations: [LayoutComponent, HeaderComponent, FooterComponent]
+  exports: [
+    Page1Module,
+    Page2Module,
+    Page3Module
+  ],
+  declarations: [
+    LayoutComponent,
+    HeaderComponent,
+    FooterComponent
+  ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+  ]
 })
 export class LayoutModule { }

@@ -1,11 +1,15 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { SignInComponent } from './sign-in.component';
+
+import { SignInComponent } from './';
+
+import { SharedModule } from '../_shared';
 
 @NgModule({
   imports: [
-    CommonModule
+    SharedModule
   ],
-  declarations: [SignInComponent]
+  declarations: [
+    SignInComponent
+  ]
 })
 export class SignInModule { }

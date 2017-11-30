@@ -1,11 +1,15 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { SignUpComponent } from './sign-up.component';
+
+import { SignUpComponent } from './';
+
+import { SharedModule } from '../_shared';
 
 @NgModule({
   imports: [
-    CommonModule
+    SharedModule
   ],
-  declarations: [SignUpComponent]
+  declarations: [
+    SignUpComponent
+  ]
 })
 export class SignUpModule { }
