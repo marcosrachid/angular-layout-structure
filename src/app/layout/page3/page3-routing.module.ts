@@ -1,10 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { Page3Component } from './';
+import { Page3Component } from './page3.component';
 
 import { AppGuard } from '../../_shared';
 
-export const Page3Routes: Routes = [
-  { path: 'page3', component: Page3Component, canActivate: [ AppGuard ] }
+const routes: Routes = [
+  { path: 'page3', component: Page3Component }
 ];
+
+@NgModule({
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
+})
+export class Page3Routes { }

@@ -1,24 +1,17 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
+import { LayoutComponent } from './layout.component';
 import {
-  Page1Module,
-  Page2Module,
-  Page3Module,
-  LayoutComponent,
   HeaderComponent,
   FooterComponent
 } from './';
-
+import { LayoutRoutes } from './layout-routing.module';
 import { SharedModule } from '../_shared';
 
 @NgModule({
   imports: [
-    SharedModule
-  ],
-  exports: [
-    Page1Module,
-    Page2Module,
-    Page3Module
+    SharedModule,
+    LayoutRoutes
   ],
   declarations: [
     LayoutComponent,
