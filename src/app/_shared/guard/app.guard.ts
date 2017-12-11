@@ -1,15 +1,12 @@
 import { Injectable } from '@angular/core';
-import { Router, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
-import { Observable } from 'rxjs/Observable';
+import { Router, CanActivate } from '@angular/router';
 
 @Injectable()
 export class AppGuard implements CanActivate {
 
   constructor(private router: Router) {}
 
-  canActivate(
-    next: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
+  canActivate() {
       if (localStorage.getItem('access_token')) {
         return true;
       }

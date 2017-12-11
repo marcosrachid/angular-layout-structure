@@ -6,7 +6,7 @@ import { Page2Component } from './page2.component';
 import { AppGuard } from '../../_shared';
 
 const routes: Routes = [
-  { path: 'page2', component: Page2Component }
+  { path: '', component: Page2Component }
 ];
 
 @NgModule({

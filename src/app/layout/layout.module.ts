@@ -4,7 +4,7 @@ import { LayoutComponent } from './layout.component';
 import {
   HeaderComponent,
   FooterComponent
-} from './';
+} from './components';
 import { LayoutRoutes } from './layout-routing.module';
 import { SharedModule } from '../_shared';
 

@@ -15,7 +15,7 @@ export class SignInComponent implements OnInit {
 
   login() {
     localStorage['access_token'] = true;
-    this.router.navigate(['/']);
+    this.router.navigate(['']);
   }
 
 }
